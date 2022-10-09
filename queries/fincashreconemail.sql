@@ -1,0 +1,1 @@
+SELECT cr.*,csh.category AS cash_remark,crd.category AS card_remark FROM collection_recon AS cr LEFT JOIN `collection_recon_status` AS csh ON csh.id=cr.CASH_DEP_STATUS LEFT JOIN `collection_recon_status` AS crd ON crd.id=cr.CARD_DEP_STATUS WHERE PAYMENT_OR_REFUND_DATE=? order by PAYMENT_OR_REFUND_DATE desc

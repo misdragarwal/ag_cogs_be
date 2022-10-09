@@ -1,0 +1,100 @@
+// const mysql = require('./modules').mysql
+const mysql = require('./modules').mysql2
+const creds = require('./creds')
+const mySQL=require('./modules').mysql_new
+exports.ideamed = mysql.createPool({
+    host: creds.ideamed.host,
+    user: creds.ideamed.user,
+    password: creds.ideamed.pass,
+    database: creds.ideamed.db,
+    port: creds.ideamed.port,
+    dateStrings: true,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+})
+
+exports.scm_root = mysql.createPool({
+    host: creds.scm_root.host,
+    user: creds.scm_root.user,
+    password: creds.scm_root.pass,
+    database: creds.scm_root.db,
+    port: creds.scm_root.port,
+    dateStrings: true,
+    insecureAuth: true,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+})
+
+exports.scm_public = mysql.createPool({
+    host: creds.scm_public.host,
+    user: creds.scm_public.user,
+    password: creds.scm_public.pass,
+    database: creds.scm_public.db,
+    port: creds.scm_public.port,
+    dateStrings: true,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+})
+
+
+exports.mis_root = mysql.createPool({
+    host: creds.mis_root.host,
+    user: creds.mis_root.user,
+    password: creds.mis_root.pass,
+    database: creds.mis_root.db,
+    port: creds.mis_root.port,
+    dateStrings: true,
+    insecureAuth: true,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+})
+
+exports.mis_public = mysql.createPool({
+    host: creds.mis_public.host,
+    user: creds.mis_public.user,
+    password: creds.mis_public.pass,
+    database: creds.mis_public.db,
+    port: creds.mis_public.port,
+    dateStrings: true,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+})
+
+
+//praveen
+exports.scmroot = mySQL.createPool({
+    host: creds.scm_root.host,
+    user: creds.scm_root.user,
+    password: creds.scm_root.pass,
+    database: creds.scm_root.db,
+    port: creds.scm_root.port,
+    dateStrings: true,
+    insecureAuth: true,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+})
+
+exports.scmpublic = mySQL.createPool({
+    host: creds.scm_public.host,
+    user: creds.scm_public.user,
+    password: creds.scm_public.pass,
+    database: creds.scm_public.db,
+    port: creds.scm_public.port,
+    dateStrings: true,
+    multipleStatements: true,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+})
